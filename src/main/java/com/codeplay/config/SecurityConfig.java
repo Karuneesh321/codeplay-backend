@@ -26,8 +26,8 @@ public class SecurityConfig {
 
     // Reads CORS_ALLOWED_ORIGINS from Railway env variable
     // Falls back to localhost for local development
-    @Value("${cors.allowed.origins:http://localhost:3000}")
-    private String corsAllowedOrigins;
+   @Value("${CORS_ALLOWED_ORIGINS:http://localhost:3000}")
+private String corsAllowedOrigins;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
